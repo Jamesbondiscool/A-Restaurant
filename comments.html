@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <div class="comments">
+        <h2>Comments</h2>
+        <div class="comment">
+          <img src="img/profile-pic-1.jpg" alt="User 1">
+          <div class="comment-details">
+            <h3>Toyin Abraham</h3>
+            <p>Great food, will definitely come back for more!</p>
+          </div>
+        </div>
+        <div class="comment">
+          <img src="img/profile-pic-2.jpg" alt="User 2">
+          <div class="comment-details">
+            <h3>GistLover</h3>
+            <p>Amazing atmosphere and delicious food!</p>
+          </div>
+        </div>
+        <div class="comment">
+          <img src="img/profile-pic-3.jpg" alt="User 3">
+          <div class="comment-details">
+            <h3>Diary of a kitchen lover</h3>
+            <p>My new favorite Nigerian restaurant!</p>
+          </div>
+        </div>
+        <form action="#" method="post" class="comment-form">
+          <h3>Leave a comment</h3>
+          <input type="text" placeholder="Name">
+          <input type="email" placeholder="Email">
+          <textarea placeholder="Your comment"></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      
+</html>
+<style>
+    .comments {
+  padding: 20px;
+  border: 1px solid #ddd;
+  background: url(img/bg2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.comments h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.comment {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.comment img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.comment-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-details h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 20px;
+  color: #111;
+  font-size: 1em;
+  color: crimson;
+  font-weight: 600;
+}
+
+.comment-details p {
+  font-size: 16px;
+  margin: 0;
+  color: #fff;
+  font-style: italic ;
+}
+
+.comment-form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-form h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.comment-form input,
+.comment-form textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.comment-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+.comment-form button:hover {
+  background-color: #3e8e41;
+}
+
+</style>

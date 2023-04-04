@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise</title>
+</head>
+<body>
+    <button class="glow-btn" type="button">CLICK IF YOU ENJOYED THE FOOD</button>
+</body>
+</html>
+<style>
+    body{
+    margin: 0;padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.glow-btn{
+    width: 900px;
+    height: 200px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index:0;
+    border-radius: 10px;
+    transition: .7s ease-in-out;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+.glow-btn:hover{
+    animation: colorcircle 20s linear infinite;
+    text-shadow: 0 0 10px;
+    letter-spacing: 2px;
+}
+.glow-btn::before{
+content: '';
+background: linear-gradient(45deg, #ff0000,#ff7300,#fffb00,#48ff00,#00ffd5,#002bff,#7a00ff,#ff00c8,#ff0000);
+
+position: absolute;
+top: -2px;
+left: -2px;
+background-size: 400%;
+z-index: -1;
+filter: blur(5px);
+width: calc(100% + 4px);
+height: calc(100% + 4px);
+animation: glow 20s linear infinite;
+opacity: 0;
+transition: opacity .7s ease-in-out;
+border-radius: 10px;
+}
+.glow-btn:active {
+    color: #000
+}
+.glow-btn:active::after {
+    background: transparent;
+}
+.glow-btn:hover::before{
+    opacity: 1;
+}
+.glow-btn::after{
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glow{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 400% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+
+@keyframes colorcircle{
+    6%{
+    color: #ff0000;
+    }
+    11%{
+color: #ff7300;
+    }
+    22%{
+color:#fffb00 ;
+    }
+    33%{
+color:#48ff00;
+    }
+    44%{
+color: #00ffd5;
+    }
+    55%{
+color: #002bff;
+    }
+    66%{
+color: #7a00ff;
+    }
+    77%{
+color:#ff00c8 ;
+    }
+    88%{
+color: #ff7300;
+    }
+    95%{
+    color: #ff0000;
+    }
+    99%{
+        color: pink;
+    }
+    100%{
+    color: #fff;
+    }
+}
+</style>
